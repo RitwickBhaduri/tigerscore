@@ -28,51 +28,51 @@ img {
 }
 
 /* Media query for screens with a minimum width of 768 pixels */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   /* Display the desktop image and hide the tablet and mobile images */
-  .desktop {
-    display: block;
-  }
+  .desktop, .index-logo-desktop, .index-from-desktop {
+display: block;
+}
 
-  .tablet {
-    display: none;
-  }
+.tablet, .index-logo-tablet, .index-from-tablet {
+display: none;
+}
 
-  .mobile {
-    display: none;
-  }
+.mobile, .index-logo-mobile, .index-from-mobile {
+display: none;
+}
 }
 
 /* Media query for screens with a maximum width of 767 pixels */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   /* Hide the desktop and mobile images and display the tablet image */
-  .desktop {
-    display: none;
-  }
+  .desktop, .index-logo-desktop, .index-from-desktop {
+display: none;
+}
 
-  .tablet {
-    display: block;
-  }
+.tablet, .index-logo-tablet, .index-from-tablet {
+display: block;
+}
 
-  .mobile {
-    display: none;
-  }
+.mobile, .index-logo-mobile, .index-from-mobile {
+display: none;
+}
 }
 
 /* Media query for screens with a maximum width of 480 pixels */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   /* Hide the desktop and tablet images and display the mobile image */
-  .desktop {
-    display: none;
-  }
+  .desktop, .index-logo-desktop, .index-from-desktop {
+display: none;
+}
 
-  .tablet {
-    display: none;
-  }
+.tablet, .index-logo-tablet, .index-from-tablet {
+display: none;
+}
 
-  .mobile {
-    display: block;
-  }
+.mobile, .index-logo-mobile, .index-from-mobile {
+display: block;
+}
 }
 
 /* Set the position of the image to fixed, so it does not move when the user scrolls */
@@ -80,7 +80,68 @@ img {
 /* Set the height to 100vh and the width to 100vw, to make the image cover the entire viewport */
 /* Set the object-fit property to cover, so the image maintains its aspect ratio and covers the entire element */
 /* Set the object-position property to center, so the image is centered within the element */
-@media screen and (min-width: 768px) {
+
+.index-logo-desktop {
+  width: auto;
+  max-width: 30%; /* set a maximum width to ensure the aspect ratio is maintained */
+  margin: 0 auto; /* center the element horizontally */
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index-logo-tablet {
+  width: auto;
+  max-width: 30%; /* set a maximum width to ensure the aspect ratio is maintained */
+  margin: 0 auto; /* center the element horizontally */
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index-logo-mobile {
+  width: auto;
+  max-width: 50%; /* set a maximum width to ensure the aspect ratio is maintained */
+  margin: 0 auto; /* center the element horizontally */
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index-from-desktop {
+  width: auto;
+  max-width: 15%; /* set a maximum width to ensure the aspect ratio is maintained */
+  margin: 0 auto; /* center the element horizontally */
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index-from-tablet {
+  width: auto;
+  max-width: 15%; /* set a maximum width to ensure the aspect ratio is maintained */
+  margin: 0 auto; /* center the element horizontally */
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index-from-mobile {
+  width: auto;
+  max-width: 25%; /* set a maximum width to ensure the aspect ratio is maintained */
+  margin: 0 auto; /* center the element horizontally */
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 1024px) {
   .desktop {
     position: fixed;
     top: 0;
@@ -89,10 +150,11 @@ img {
     width: 100vw;
     object-fit: cover;
     object-position: center;
+    z-index: -1;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .tablet {
     position: fixed;
     top: 0;
@@ -101,10 +163,11 @@ img {
     width: 100vw;
     object-fit: cover;
     object-position: center;
+    z-index: -1;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .mobile {
     position: fixed;
     top: 0;
@@ -113,5 +176,6 @@ img {
     width: 100vw;
     object-fit: cover;
     object-position: center;
+    z-index: -1;
   }
 }
