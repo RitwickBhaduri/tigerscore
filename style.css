@@ -20,6 +20,13 @@ img {
   height: auto;
 }
 
+.login {
+  width: auto;
+  height: 75%;
+  max-width: 800px; /* set a maximum width to ensure the aspect ratio is maintained */
+  margin: 0 auto; /* center the element horizontally */
+}
+
 /* Media query for screens with a minimum width of 768 pixels */
 @media screen and (min-width: 768px) {
   /* Display the desktop image and hide the tablet and mobile images */
